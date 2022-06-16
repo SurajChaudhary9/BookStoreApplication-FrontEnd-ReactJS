@@ -43,7 +43,7 @@ UserService.loginUser(user)
 
   const paperStyle = {
     padding: 20,
-    height: "70vh",
+    height: "55vh",
     width: 480,
     margin: "20px auto",
   };

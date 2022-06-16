@@ -10,5 +10,10 @@ class UserService {
     loginUser(user) {
         return axios.post(`${this.baseUrl}`+ "/login", user)
     }
+    forgotPassword = (email) => {
+
+        console.log(email);
+        return axios.post(`${this.baseUrl}` + "/forgotpassword?email="+ email);
+    }
 }
 export default new UserService();

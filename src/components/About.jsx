@@ -21,11 +21,13 @@ const About = () => {
          </p><br></br>
         <div className="text-con">
          <a href="/reg">Register Here</a> <a href="/login">Already a User ?</a>
-         </div>
+         </div> 
          
        </div>
      </div>
+     
    </div>
+   
  </div>
  
   )
