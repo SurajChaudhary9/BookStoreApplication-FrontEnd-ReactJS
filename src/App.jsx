@@ -5,6 +5,7 @@ import UserRegistration from './components/UserRegistration';
 import Signin from './components/Signin';
 import About from './components/About';
 import Login from './components/Login';
+import ResetPassword from './components/ResetPassword';
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import ForgotPassword from './components/ForgotPassword';
 
@@ -21,8 +22,9 @@ function App() {
          
          <Route exact path='/about' component={About}></Route>
          <Route exact path='/login' component={Login}></Route>
-         <Route path='/forgot' component={ForgotPassword}></Route>
-         <Route path='/signin' component={Signin}></Route>
+         <Route exact path='/forgot' component={ForgotPassword}></Route>
+          <Route exact path='/resetpass' component={ResetPassword}></Route>
+         <Route exact path='/signin' component={Signin}></Route>
        </Switch>
     </BrowserRouter>
     {/* <Footer/> */}

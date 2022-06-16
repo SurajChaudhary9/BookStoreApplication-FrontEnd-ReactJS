@@ -4,7 +4,7 @@ import "./ResetPassword.css"
 import TextField from '@mui/material/TextField';
 import { useState } from "react";
 
-import UserService from '../../services/UserService';
+import UserService from '../service/UserService';
 //for password
 import IconButton from '@mui/material/IconButton';
 import FormControl from '@mui/material/FormControl';
@@ -64,7 +64,7 @@ export default function ResetPassword(props) {
 
         UserService.resetPassword(passwordData.otp, passwordData.password).then((response) => {
             console.log("reset password" + response)
-            alert("password reset successfully");
+            alert("PASSWORD REST SUCCESSFUL !");
             props.history.push({
                 pathname: "/login",
             });
@@ -78,20 +78,6 @@ export default function ResetPassword(props) {
 
     return (
         <div>
-
-            <header className="header-content header">
-                <div className="logo-content">
-                    <img
-                        src="./education.svg"
-                        alt="logo-content"
-                        className="logo-content-img"
-                        width=""
-                    />
-                    <div>
-                        <span className="text">BookStore</span>
-                    </div>
-                </div>
-            </header>
 
             <div className="form-content-reset">
 

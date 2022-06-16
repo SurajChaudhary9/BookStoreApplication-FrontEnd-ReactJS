@@ -15,5 +15,8 @@ class UserService {
         console.log(email);
         return axios.post(`${this.baseUrl}` + "/forgotpassword?email="+ email);
     }
+    resetPassword = (otp,password)=>{
+        return axios.post(`${this.baseUrl}`+"/resetpassword/" + otp + "?password="+password)
+    }
 }
 export default new UserService();

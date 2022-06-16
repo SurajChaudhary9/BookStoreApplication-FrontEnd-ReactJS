@@ -1,102 +1,83 @@
-import React from "react";
-
-import {
-  Grid,
-  Paper,
-  Avatar,
-  TextField,
-  Button,
-  Typography,
-  Link,
-} from "@material-ui/core";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import UserService from "../service/UserService";
+import React from 'react'
+import { Link } from "react-router-dom";
+import "./ForgotPassword.css"
 import { useState } from "react";
+import TextField from '@mui/material/TextField';
+
+import UserService from '../service/UserService';
 
 export default function ForgotPassword(props) {
 
-    const [email, setEmail] = useState("");
-  
-  
-  
-    const handleInput = (event) => {
-      let value = event.target.value;
-      setEmail(value);
-      console.log(value);
-    };
-  
-    const forgotPassword = (event) => {
-      event.preventDefault();
-  
-      UserService.forgotPassword(email).then((response) => {
-        setEmail("");
-        console.log("Login" + response)
-        alert("Reset Password otp Has Been Sent To Your Email Address");
-        props.history.push({
-          pathname: "/resetPass"
-        })
-      }).catch((response) => {
-        alert(response.response.data.data);
-      });
-  
-    };
+  const [email, setEmail] = useState("");
 
-  const paperStyle = {
-    padding: 20,
-    height: "50vh",
-    width: 480,
-    margin: "20px auto",
+
+
+  const handleInput = (event) => {
+    let value = event.target.value;
+    setEmail(value);
+    console.log(value);
   };
-  const avatarStyle = { backgroundColor: "rgb(193 6 6)" };
-  const btnstyle = { margin: "8px 0" };
-  return (
-    <Grid>
-      <Paper elevation={10} style={paperStyle}>
-        <Grid align="center">
-          <Avatar style={avatarStyle}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <h2>Sign In</h2>
-        </Grid>
-        <TextField
-          label="Email"
-          placeholder="Enter Registered Email"
-          fullWidth
-          required
-          name="email"
-          value={email}
-          onChange={handleInput}
-        />
-        <FormControlLabel
-          control={<Checkbox name="checkedB" color="primary" />}
-          label="Remember me"
-        />
-        <Button
-          type="submit"
-          color="primary"
-          variant="contained"
-          style={btnstyle}
-          fullWidth
-          onSubmit={forgotPassword} 
-        >
-          Get Reset Link
-        </Button>
-        <Typography>
-          {" "}
-          Remember Your Password ?<Link href="/login">Login</Link>
-        </Typography>
-        <Typography>
-          {" "}
-          Reset Your Password ?<Link href="/login">Reset Password</Link>
-        </Typography>
-        {/* <div className="row-content">
-            <Link className="link"  to="/resetPassword">Reset Password?</Link>
-          </div> */}
-      </Paper>
-    </Grid>
-  );
-};
 
-// export default ForgotPassword
+  const forgotPassword = (event) => {
+    event.preventDefault();
+
+    UserService.forgotPassword(email).then((response) => {
+      setEmail("");
+      console.log("Login" + response)
+      alert("Reset Password otp Has Been Sent To Your Email Address");
+      props.history.push({
+        pathname: "/resetPass"
+      })
+    }).catch((response) => {
+      alert(response.response.data.data);
+    });
+
+  };
+
+
+  return (
+    <div>
+
+      <div className="form-content-forgot">
+
+        <form className="form-forgot" action="#" onSubmit={forgotPassword} >
+
+          <div className="form-head-content" font-family="corbel">
+            <div className="form-head-forgot">FORGOT PASSWORD ?</div>
+          </div>
+
+
+          <div className="row-content-forgot">
+            <label for="email">EmailId</label>
+            <TextField
+              className="input-forgot"
+              id="outlined-helperText"
+              type="text"
+              name="email"
+              label="Email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={handleInput}
+            />
+          </div>
+
+          <div>
+            <button className='button-forgot' type="login"> Reset Password</button>
+          </div>
+
+          <div className="link">
+            <Link to="/login" className="link"> Back </Link>
+          </div >
+
+          {/* <div className="link">
+            <Link to="/resetpass" className="link"> reset </Link>
+          </div > */}
+
+
+        </form>
+
+      </div>
+    </div>
+  )
+}
