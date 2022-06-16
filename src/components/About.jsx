@@ -18,9 +18,11 @@ const About = () => {
           <p><i><small>"Books are the quietest and most constant of friends; <br></br>
           they are the most accessible and wisest of counselors,<br></br>
            and the most patient of teachers."</small></i></p>
-         </p>
-        
-         <a href="/reg">Register Here</a>
+         </p><br></br>
+        <div className="text-con">
+         <a href="/reg">Register Here</a> <a href="/login">Already a User ?</a>
+         </div>
+         
        </div>
      </div>
    </div>

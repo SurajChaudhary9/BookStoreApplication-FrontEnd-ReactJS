@@ -7,5 +7,8 @@ class UserService {
     saveUser(user) {
         return axios.post(`${this.baseUrl}`+ "/register", user)
     }
+    loginUser(user) {
+        return axios.post(`${this.baseUrl}`+ "/login", user)
+    }
 }
 export default new UserService();

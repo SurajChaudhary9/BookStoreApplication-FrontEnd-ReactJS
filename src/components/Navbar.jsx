@@ -1,6 +1,7 @@
 import React from 'react'
 import education from "../assets/education.svg"
 import signin from "../assets/log.jpg"
+import home from "../assets/home.png"
 // import { Link } from 'react-router-dom';
 const Navbar = () => {
 
@@ -19,11 +20,21 @@ const Navbar = () => {
       <p className="text-white font-normal font-sans px-2" >BookStore</p>
       <div className="h-16 flex items-center absolute right-3">
     {/* <Link to ="/signin"> */}
+    <a href = "/about">
+    <img src={home}
+     height={25}
+     width={27}
+     className="px-1"></img>
+     {/* </Link> */}
+     </a>
+    <a href = "/login">
     <img src={signin}
      height={25}
      width={25}
      className="rounded-full"></img>
      {/* </Link> */}
+     </a>
+     
      </div>
     </div>
   </div>
