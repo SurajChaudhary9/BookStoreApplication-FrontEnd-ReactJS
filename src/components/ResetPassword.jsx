@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 import { useState } from "react";
 
 import UserService from '../service/UserService';
-//for password
 import IconButton from '@mui/material/IconButton';
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -38,8 +37,6 @@ export default function ResetPassword(props) {
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
-
-    //impl
 
     const [passwordData, setPasswordData] = useState({
         password: "",

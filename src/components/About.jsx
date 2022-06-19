@@ -12,9 +12,9 @@ const About = () => {
          <img src={book} alt="" />
        </div>
        <div className="text-container">
-         <h1>About us</h1>
+         <h1>Welcome To Book Store</h1>
          <p>
-          Welcome To Book Store App<br></br><br></br>
+          For All the Bibliophilia Folks : )<br></br><br></br>
           <p><i><small>"Books are the quietest and most constant of friends; <br></br>
           they are the most accessible and wisest of counselors,<br></br>
            and the most patient of teachers."</small></i></p>

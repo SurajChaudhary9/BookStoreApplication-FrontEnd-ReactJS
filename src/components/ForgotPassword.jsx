@@ -26,7 +26,7 @@ export default function ForgotPassword(props) {
       console.log("Login" + response)
       alert("Reset Password otp Has Been Sent To Your Email Address");
       props.history.push({
-        pathname: "/resetPass"
+        pathname: "/resetpass"
       })
     }).catch((response) => {
       alert(response.response.data.data);
