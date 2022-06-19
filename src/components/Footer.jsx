@@ -28,7 +28,7 @@ const Footer = () => {
         <h4>online shop</h4>
         <ul>
           <li>
-            <a href="#">Book</a>
+            <a href="/addbook">Book</a>
           </li>
         </ul>
       </div>

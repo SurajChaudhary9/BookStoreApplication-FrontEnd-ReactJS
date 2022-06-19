@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import ResetPassword from './components/ResetPassword';
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import ForgotPassword from './components/ForgotPassword';
+import AddBook from './components/AddBook';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/resetpass' component={ResetPassword}></Route>
           <Route exact path='/signin' component={Signin}></Route>
          <Route exact path='/contact' component={Contact}></Route>
+         <Route exact path='/addbook' component={AddBook}></Route>
        </Switch>
     </BrowserRouter>
     <Footer/>
