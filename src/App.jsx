@@ -25,12 +25,12 @@ function App() {
          
          <Route exact path='/about' component={About}></Route>
          <Route exact path='/login' component={Login}></Route>
-         <Route exact path='/forgot' component={ForgotPassword}></Route>
-          <Route exact path='/resetpass' component={ResetPassword}></Route>
-          <Route exact path='/signin' component={Signin}></Route>
-         <Route exact path='/contact' component={Contact}></Route>
-         <Route exact path='/addbook' component={AddBook}></Route>
-         <Route exact path='/books' component={Book}></Route>
+         <Route  path='/forgot' component={ForgotPassword}></Route>
+          <Route  path='/resetpass' component={ResetPassword}></Route>
+          <Route  path='/signin' component={Signin}></Route>
+         <Route  path='/contact' component={Contact}></Route>
+         <Route  path='/addbook' component={AddBook}></Route>
+         <Route  path='/books' component={Book}></Route>
        </Switch>
     </BrowserRouter>
     <Footer/>
