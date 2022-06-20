@@ -5,8 +5,8 @@ import "./Book.css"
 import { useState } from "react";
 import React, { useEffect } from "react";
 
-import Card from "../Book/Card";
-import BookService from "../../services/BookService";
+import Card from "./Card";
+import BookService from "../service/BookService";
 
 export default function () {
 
@@ -63,7 +63,7 @@ export default function () {
                 {bookDetails.map((book) => {
                     return (
                         <Card
-                            image={book.imageURL}
+                            image={book.logo}
                             title={book.bookName}
                             description={book.description}
                             quantity={book.quantity}

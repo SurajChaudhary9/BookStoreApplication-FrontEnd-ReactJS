@@ -10,6 +10,7 @@ import ResetPassword from './components/ResetPassword';
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import ForgotPassword from './components/ForgotPassword';
 import AddBook from './components/AddBook';
+import Book from './components/Book';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
           <Route exact path='/resetpass' component={ResetPassword}></Route>
           <Route exact path='/signin' component={Signin}></Route>
          <Route exact path='/contact' component={Contact}></Route>
-         <Route exact path='/addbook' component={AddBook}></Route>
+         {/* <Route exact path='/addbook' component={AddBook}></Route> */}
+         <Route exact path='/books' component={Book}></Route>
        </Switch>
     </BrowserRouter>
     <Footer/>
